@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {"id": "lobby",        "name": "Lobby",              "floor": 1, "x": 20, "y": 10},
+    {"id": "exit_utama",   "name": "Pintu Keluar Utama", "floor": 1, "x": 20, "y": 0,  "exit": true},
+    {"id": "koridor_a",    "name": "Koridor Barat",      "floor": 1, "x": 10, "y": 10},
+    {"id": "koridor_b",    "name": "Koridor Timur",      "floor": 1, "x": 30, "y": 10},
+    {"id": "exit_barat",   "name": "Pintu Keluar Barat", "floor": 1, "x": 0,  "y": 10, "exit": true},
+    {"id": "exit_timur",   "name": "Pintu Keluar Timur", "floor": 1, "x": 40, "y": 10, "exit": true},
+    {"id": "lab_fisika",   "name": "Lab Fisika",         "floor": 1, "x": 0,  "y": 20},
+    {"id": "kelas_101",    "name": "Kelas 101",          "floor": 1, "x": 10, "y": 0},
+    {"id": "kelas_102",    "name": "Kelas 102",          "floor": 1, "x": 30, "y": 0},
+    {"id": "kantin",       "name": "Kantin",             "floor": 1, "x": 40, "y": 20},
+    {"id": "tangga_a",     "name": "Tangga Barat L1",    "floor": 1, "x": 10, "y": 14},
+    {"id": "tangga_b",     "name": "Tangga Timur L1",    "floor": 1, "x": 30, "y": 14},
+    {"id": "l2_tangga_a",  "name": "Tangga Barat L2",    "floor": 2, "x": 10, "y": 14},
+    {"id": "l2_tangga_b",  "name": "Tangga Timur L2",    "floor": 2, "x": 30, "y": 14},
+    {"id": "l2_koridor",   "name": "Koridor Lantai 2",   "floor": 2, "x": 20, "y": 14},
+    {"id": "lab_komputer", "name": "Lab Komputer",       "floor": 2, "x": 10, "y": 24},
+    {"id": "perpustakaan", "name": "Perpustakaan",       "floor": 2, "x": 30, "y": 24},
+    {"id": "ruang_dosen",  "name": "Ruang Dosen",        "floor": 2, "x": 20, "y": 24},
+    {"id": "aula",         "name": "Aula",               "floor": 2, "x": 20, "y": 34}
+  ],
+  "edges": [
+    ["lobby", "exit_utama"], ["lobby", "koridor_a"], ["lobby", "koridor_b"],
+    ["koridor_a", "exit_barat"], ["koridor_b", "exit_timur"],
+    ["koridor_a", "lab_fisika"], ["koridor_a", "kelas_101"],
+    ["koridor_b", "kelas_102"], ["koridor_b", "kantin"],
+    ["koridor_a", "tangga_a"], ["koridor_b", "tangga_b"],
+    ["tangga_a", "l2_tangga_a"], ["tangga_b", "l2_tangga_b"],
+    ["l2_tangga_a", "l2_koridor"], ["l2_tangga_b", "l2_koridor"],
+    ["l2_tangga_a", "lab_komputer"], ["l2_tangga_b", "perpustakaan"],
+    ["l2_koridor", "ruang_dosen"], ["ruang_dosen", "aula"],
+    ["lab_komputer", "ruang_dosen"], ["perpustakaan", "ruang_dosen"]
+  ]
+}
