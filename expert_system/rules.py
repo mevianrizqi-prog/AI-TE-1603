@@ -71,8 +71,8 @@ RULES: List[Rule] = [
          lambda f: "Anda sudah berada di pintu keluar. Segera menjauh dari gedung."),
     Rule("R8", 0, lambda f: f.result.found and not f.blocked and not f.already_at_exit,
          lambda f: "Tidak ada area terdampak. Rute berikut adalah rute evakuasi normal."),
-    Rule("R10", 1, lambda f: len(f.blocked) >= 2, 
-         lambda f: f"{len(f.blocked)} area terdampak sekaligus. Ikuti arahan petugas.")
     Rule("R9", 1, lambda f: f.start == "kantin" and not f.already_at_exit,
          lambda f: "Anda berada di Kantin. Jika masih aman, matikan kompor/gas sebelum keluar."),
+    Rule("R10", 1, lambda f: len(f.blocked) >= 2,
+         lambda f: f"{len(f.blocked)} area terdampak sekaligus. Ikuti arahan petugas."),
 ]
